@@ -2,7 +2,7 @@
 
 A **Vertical AI Tool** that transforms raw earnings call transcripts into structured, dashboard-ready research. Upload a PDF, and in seconds receive management sentiment, key positives, risks, forward guidance, capacity utilization, and growth initiatives — all extracted by AI acting as a senior equity research analyst.
 
-**Live Demo:** _[Add your Vercel URL here after deployment]_
+**Live Demo:** _[https://research-tool-three.vercel.app/]_
 
 ---
 
@@ -159,15 +159,6 @@ Open [http://localhost:3000](http://localhost:3000) and upload an earnings call 
 
 ---
 
-## Deploy to Vercel
-
-1. Push this repo to **GitHub**.
-2. Go to [vercel.com](https://vercel.com) → **Add New Project** → Import your repo.
-3. In **Environment Variables**, add:
-   - `GROQ_API_KEY` = `gsk_your-key-here`
-4. Click **Deploy**. Your public URL is live.
-
----
 
 ## Project Structure
 
