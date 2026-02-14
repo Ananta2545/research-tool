@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #0c1b2a;
+  --navy-light: #132d46;
+  --navy-muted: #1a3a5c;
+  --gold: #c9a84c;
+  --gold-light: #e8d48b;
+  --gold-dim: rgba(201, 168, 76, 0.12);
+  --cream: #faf8f2;
+  --cream-dark: #f0ece0;
+  --ink: #1c1c1c;
+  --ink-muted: #5a5a52;
+  --ink-light: #8a8880;
+  --positive: #2d7a4f;
+  --positive-bg: #eaf5ee;
+  --negative: #a63d3d;
+  --negative-bg: #fdf0ef;
+  --surface: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--cream);
+  --color-foreground: var(--ink);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-sans), "Georgia", serif;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.anim-fade-up {
+  animation: fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.anim-fade-up-d1 { animation-delay: 0.08s; }
+.anim-fade-up-d2 { animation-delay: 0.16s; }
+.anim-fade-up-d3 { animation-delay: 0.24s; }
+.anim-fade-up-d4 { animation-delay: 0.32s; }
+.anim-fade-up-d5 { animation-delay: 0.40s; }
+
+.loading-shimmer {
+  background: linear-gradient(90deg, var(--cream-dark) 25%, var(--cream) 50%, var(--cream-dark) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.8s ease-in-out infinite;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+
